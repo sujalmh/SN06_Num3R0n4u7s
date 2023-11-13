@@ -25,6 +25,6 @@ Never gonna make you cry
 Never gonna say goodbye
 Never gonna tell a lie and hurt you
 ```
-![QR](./qr.png)
+![QR](./merged_image.png)
 
 ### Flag: sudo{Ju5T_r0tat3_Cyclically}
