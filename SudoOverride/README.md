@@ -36,7 +36,7 @@ Each category is represented by a dedicated folder in the repository.
 
 The repository is organized by challenge categories, and each category contains its respective challenges. The folder structure is as follows:
 
-.
+```
 ├── cryptography
 │ ├── challenge1
 │ ├── challenge2
@@ -65,7 +65,7 @@ The repository is organized by challenge categories, and each category contains 
 ├── challenge1
 ├── challenge2
 └── ...
-
+```
 ## Writeup Format
 
 Each challenge folder contains a detailed writeup explaining the solution and steps to solve the challenge. The writeup follows a standardized format, including:
