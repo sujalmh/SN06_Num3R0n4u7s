@@ -5,7 +5,7 @@ Welcome to the Sudo Override CTF Writeups repository! This repository contains d
 ## Team Information
 
 I, smh01, participated in the Sudo Override CTF as a member of the team **Num3R0n4u7s**. Our team finished 5th with a total of 4490 points. Congratulations to all team members for their efforts and achievements!
-<img src="/screenshots/result.png" alt="result" width="50%">
+<img src="./screenshots/result.png" alt="result" width="50%">
 
 ## Table of Contents
 
