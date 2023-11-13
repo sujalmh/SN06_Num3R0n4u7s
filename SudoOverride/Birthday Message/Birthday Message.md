@@ -14,5 +14,6 @@ Darish decided to play a little birthday prank on Lalit, gifting him an audio fi
 flag = "sudo{binary-it-is}"
 print(flag)
 ```
+![Flag](./flag.png)
 
 ### Flag: sudo{binary-it-is}
