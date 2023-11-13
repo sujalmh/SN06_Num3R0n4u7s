@@ -48,7 +48,6 @@ while len(all_correct_positions) < 64:
         all_correct_positions.update(correct_positions)
 
     click_button(url)
-    print(len(all_correct_positions))
     
 driver.close()
 
