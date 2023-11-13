@@ -11,6 +11,7 @@ User `swapnilcrushes` wants to merge with his love interest. Can you help him do
 5. Download part1.sudo and part2.sudo and combine all the three files to form a jpg file `cat part1.sudo part2.sudo part3.sudo > flag.jpg`.
 
 The jpg file has the flag 
+![flag](./flag.jpg)
 
 ## Flag: sudo{am-i-a-normie?}
 
