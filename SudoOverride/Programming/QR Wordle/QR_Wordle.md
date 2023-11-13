@@ -10,7 +10,9 @@ It is not the optimal solution, but it was easier to get correct positions by ge
 2. Get the actual correct positions, by iterating until each image part has taken its correct position atleast once.
 3. Merge the images sequentially considering the obtained actual correct positions.
 4. Parsing the QR code gives the output:
-![QR](./merged_image.png){width=40%}
+<p align="center">
+  <img src="./merged_image.png" alt="Alt Text" width="50%">
+</p>
 
 ```
 We're no strangers to love
