@@ -57,7 +57,7 @@ Hint: The USB Device turns out to be a Keyboard
  <img src="./SpyShark/terminal.png" alt="terminal.png" width="75%">
 </p>
 
-# Flag: sudo{ShArKs_SPYing_ME}
+## Flag: sudo{ShArKs_SPYing_ME}
 
 ---
 
