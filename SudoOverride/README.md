@@ -1,6 +1,6 @@
 # Sudo Override CTF Writeups
 
-Welcome to the Sudo Override CTF Writeups repository! This repository contains detailed solutions and explanations for challenges from the CTF competition organized by IIT Pune. The challenges cover various categories, including cryptography, miscellaneous, forensics, OSINT, reverse engineering, programming, and web.
+Welcome to the Sudo Override CTF Writeups repository! This repository contains detailed solutions and explanations for challenges from the CTF competition organized by IIT Patna. The challenges cover various categories, including cryptography, miscellaneous, forensics, OSINT, reverse engineering, programming, and web.
 
 ## Team Information
 
