@@ -13,8 +13,9 @@ Here we have a decrytor, but its broken for some reason Decryptor.cpp. And here 
 ![output.png](./output.png)
 
 6. Using `t#!$IsN0tT#eF1@G` as the password, to open random.pdf.
-
-<img src="SudoOverride/Forensics/Broken!!!/flag.png" alt="random.pdf" width="75%">
+<p align="center">
+ <img src="./Broken!!!/flag.png" alt="random.pdf" width="75%">
+</p>
 
 ## Flag: sudo{So_it_wasn't_really_broken_huh}
 
@@ -30,12 +31,14 @@ The image manages to slip past the LSB statistical check, but those funky visual
  
 1. Use sigBits to extract data using MSB `python3 sigbits.py -t=MSB Niagara_in_MSB.png`
 2. Search for flag inside the extracted output data. `grep -o 'sudo{[^}]*}' outputSB.txt`
-
-<img src="SudoOverride/Forensics/Niagara in MSB/flag.png" alt="random.pdf" width="75%">
+<p align="center">
+ <img src=".Niagara in MSB/flag.png" alt="random.pdf" width="75%">
+</p>
 
 6. Using `t#!$IsN0tT#eF1@G` as the password, to open random.pdf.
-
-<img src="./Niagara in MSB/flag.png" alt="random.pdf" width="75%">
+<p align="center">
+ <img src="./Niagara in MSB/flag.png" alt="random.pdf" width="75%">
+</p>
 
 ## Flag: sudo{So_it_wasn't_really_broken_huh}
 
@@ -53,7 +56,9 @@ Hint: The USB Device turns out to be a Keyboard
 
 1. tshark to strip out only the keyscans `tshark -r ./keylogger_dump.pcap -Y 'usb.capdata && usb.data_len == 8' -T fields -e usb.capdata | sed 's/../:&/g2' > keystrokes.txt`
 2. Use the tool [ctf-usb-keyboard-parser](https://github.com/carlospolop-forks/ctf-usb-keyboard-parser) to get what was written in the communication `python3 usbkeyboard.py keystrokes.txt`
-<img src="./SpyShark/terminal.png" alt="terminal.png" width="75%">
+<p align="center">
+ <img src="./SpyShark/terminal.png" alt="terminal.png" width="75%">
+</p>
 
 # Flag: sudo{ShArKs_SPYing_ME}
 
@@ -70,6 +75,8 @@ It's so depressing to listen to this masterpiece of Picasso.
 1. Binwalk shows there is embedded files, extracting it using binwalk.
 2. Extracted files contain chords.wav.
 3. Flag is visible, using Spectogram in audacity
-<img src="./The Old Guitarist/spectogram.png" alt="spectogram.png" width="75%">
+<p align="center">
+ <img src="./The Old Guitarist/spectogram.png" alt="spectogram.png" width="75%">
+</p>
 
 ### Flag: sudo{th3_b1u3_p37i0d}
