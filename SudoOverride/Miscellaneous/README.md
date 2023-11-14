@@ -56,13 +56,13 @@ It looks like a QR code, but the QR format is wrong. Text editors are not able t
 
 1. Open the file in terminal, the QR looks fine.
 <p align="center">
- <img src="./It's all ''@''/terminal.png" alt="terminal.png" width="75%">
+ <img src="./It's all ''@''/terminal.png" alt="terminal.png" width="50%">
 </p>
 
 3. Editing confusing.txt according to the output in the terminal
 4. Replacing "@" with "█"
 <p align="center">
- <img src="./It's all ''@''/flag.png" alt="flag.png" width="75%">
+ <img src="./It's all ''@''/qr.png" alt="qr.png" width="50%">
 </p>
 
 6. Parsing QR gives the flag
