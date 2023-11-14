@@ -14,7 +14,7 @@ Here we have a decrytor, but its broken for some reason Decryptor.cpp. And here 
 
 6. Using `t#!$IsN0tT#eF1@G` as the password, to open random.pdf.
 <p align="center">
- <img src="./Broken!!!/flag.png" alt="random.pdf" width="75%">
+ <img src="./Broken!!!/flag.png" alt="random.pdf" width="50%">
 </p>
 
 ## Flag: sudo{So_it_wasn't_really_broken_huh}
@@ -32,7 +32,7 @@ The image manages to slip past the LSB statistical check, but those funky visual
 1. Use sigBits to extract data using MSB `python3 sigbits.py -t=MSB Niagara_in_MSB.png`
 2. Search for flag inside the extracted output data. `grep -o 'sudo{[^}]*}' outputSB.txt`
 <p align="center">
- <img src=".Niagara in MSB/flag.png" alt="random.pdf" width="75%">
+ <img src="./Niagara in MSB/flag.png" alt="random.pdf" width="75%">
 </p>
 
 6. Using `t#!$IsN0tT#eF1@G` as the password, to open random.pdf.
