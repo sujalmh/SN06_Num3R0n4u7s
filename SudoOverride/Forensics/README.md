@@ -10,9 +10,10 @@ Here we have a decrytor, but its broken for some reason Decryptor.cpp. And here 
 2. The code provided is used to convert hex to ascii, but it doesnt work since in the main function, "br0kEn" was hardcoded to be output. Corrected the output statement to print the variable asciiOutput instead of the string literal "brOkEn".
 3. Using the first 32 characters of the key.txt file to get hex data (7423212449734E307454236546314047).
 4. Hex data is used as input for Decryptor.cpp, which gives output (t#!$IsN0tT#eF1@G)
-![output.png](./output.png)
-
-6. Using `t#!$IsN0tT#eF1@G` as the password, to open random.pdf.
+<p align="center">
+ <img src="./Broken!!!/output.png" alt="random.pdf" width="50%">
+</p>
+5. Using `t#!$IsN0tT#eF1@G` as the password, to open random.pdf.
 <p align="center">
  <img src="./Broken!!!/flag.png" alt="random.pdf" width="50%">
 </p>
