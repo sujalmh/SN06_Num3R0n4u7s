@@ -21,19 +21,19 @@ Sometimes, a little patience is all you need.
 
 1. The flag is printed if local_440 is greater or equal to condition, so changing it to if local_440 is lesser than or equal.
 <p align="center">
- <img src="./Just in Time/assembly.png" alt="assembly.png" width="75%">
+ <img src="./Just In Time/assembly.png" alt="assembly.png" width="75%">
 </p>
 
 3. changing JLE to JGE in assembly will print the flag
 <p align="center">
- <img src="./Just in Time/terminal.png" alt="terminal.png" width="75%">
+ <img src="./Just In Time/terminal.png" alt="terminal.png" width="75%">
 </p>
 
 ## Flag: sudo{time.travel}
 
 ---
 
-# Match The Following
+# Match the Following
 
 ### File: rev001
 
@@ -41,7 +41,7 @@ Sometimes, a little patience is all you need.
 
 1. Analysing strings gives two strings which are relevant. One contains scrambled flag and another contains correct index of each character in hex.
 <p align="center">
- <img src="./Match The Following/decompile.png" alt="decompile.png" width="75%">
+ <img src="./Match the Following/decompile.png" alt="decompile.png" width="75%">
 </p>
 
 3. Decoding using python
