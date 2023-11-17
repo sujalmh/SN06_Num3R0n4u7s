@@ -16,8 +16,6 @@ I, smh01, participated in the Sudo Override CTF as a member of the team **Num3R0
 - [Challenge Categories](#challenge-categories)
 - [Folder Structure](#folder-structure)
 - [Writeup Format](#writeup-format)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Team Information](#team-information)
 
 ## Introduction
 
