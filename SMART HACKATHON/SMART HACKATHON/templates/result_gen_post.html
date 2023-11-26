@@ -9,8 +9,8 @@
     <h1>Results of Generated Posts</h1>
     {% if outputs %}
         {% for key, value in outputs.items() %}
-            <h1>{{ key }}</h1>
-            <p>{{ value }}</p>
+            <h2>{{ key }}</h2>
+            <p><md-block>{{ value }}</md-block></p>
         {% endfor %}
     {% endif %}
 

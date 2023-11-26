@@ -52,7 +52,7 @@ def generate_posts_out():
         output=bard.get_answer(prompt)['content']
 
 
-        outputs[prompt]=output
+        outputs[news]=output
     return outputs
 
 
