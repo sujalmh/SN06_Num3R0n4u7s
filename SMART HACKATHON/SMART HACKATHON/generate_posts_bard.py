@@ -50,7 +50,7 @@ def generate_posts_out():
     for news in headlines:
         prompt=prompt_head+news+prompt_foot
         output=bard.get_answer(prompt)['content']
-
+        output=output.split(":")[1]
 
         outputs[news]=output
     return outputs

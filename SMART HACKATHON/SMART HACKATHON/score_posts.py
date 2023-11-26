@@ -87,13 +87,19 @@ def results(target_url,no_of_posts):
 
     driver.quit()
     
+    clean_posts=[]
+    for post in posts:
+        if len(post)<5:
+            continue
+        else:
+            clean_posts.append(post)
     post_score_positive=[]
     post_score_emotion=[]
     final_score_positive=int()
     post_id=0
     final_sorted_emotions={}
 
-    for text in posts:                                                                  #score
+    for text in clean_posts:                                                                  #score
         post_id+=1
         try:
             encoded_input = tokenizer(text.strip(), return_tensors='pt')
@@ -118,4 +124,4 @@ def results(target_url,no_of_posts):
             continue
     final_score_positive=final_score_positive/(post_id+1)
     final_score_positive=round(final_score_positive,1)
-    return posts,post_score_positive,post_score_emotion,final_sorted_emotions,final_score_positive,name,img_url
+    return clean_posts,post_score_positive,post_score_emotion,final_sorted_emotions,final_score_positive,name,img_url

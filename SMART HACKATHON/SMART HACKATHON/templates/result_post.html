@@ -2,30 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <title>LinkedIn Result</title>
+    <title>Linkedin Post Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        *{
+            font-family: monospace;
+        }
         .w3-red{
             width: 200px;
         }
         .w3-green{
             width: calc({{per_pos}}% *200);
         }
+        
+
+        body{
+            
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow-x: hidden;
+        }
     </style>
 </head>
 
 <body>
-    <div id="result-content">
-
-        <h2>Posts Analysis</h2>
-        <div class="w3-red">
-            <div class="w3-green" style="height:24px;"></div>
-        </div><br>
-
+    <div id="result-content" >
+        <div style="text-align: center;">
+            <h2 >Posts Analysis</h2>
+            <div class="w3-red">
+                <div class="w3-green" style="height:24px;"></div>
+            </div><br>
+    </div>
         <p>{{post}}</p>
         <p>Postive Comments Sumamry: {{summ_pos}}</p>
         <p>Neutral Comments Sumamry: {{summ_neu}}</p>
