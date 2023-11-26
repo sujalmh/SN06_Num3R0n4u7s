@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results of Generated Posts</title>
+</head>
+<body>
+    <h1>Results of Generated Posts</h1>
+    {% if outputs %}
+        {% for key, value in outputs.items() %}
+            <h1>{{ key }}</h1>
+            <p>{{ value }}</p>
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>

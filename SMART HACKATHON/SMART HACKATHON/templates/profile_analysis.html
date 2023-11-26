@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body style="background-color: black;">
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Num3R0<span>n4u7s</span></h2>
+               
+                <button onclick="location.href='/profile_analysis'" class="lead" type="button">Profile Analysis</button>
+                <button onclick="location.href='/post_analysis'" class="lead" type="button">Post Quality Analysis</button>
+                <button onclick="location.href='/generate_posts'" class="lead" type="button">Post Generation</button>
+                
+            <a href="{{ url_for('leaderboard') }}"><button class="lead" type="button">Leaderboard</button></a>
+        </nav>
+    </div>
+    <div class="content" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;margin-bottom: 0;">
+        <h1 style="padding-top:10%;color: rgb(235, 19, 19);">Linked1n Pr0file 4nalysis :) </h1>
+        <p class="small">Analyse the sentiment in the post of linkedin!!<br>Have fun....</p>
+    </div>
+    <div class="body" style="border-top-left-radius: 0;border-top-right-radius: 0;margin-top: 0;padding-top: 10%;">
+        <div class="box" >
+
+            <form action="/result" method="post" name="searchForm">
+                <input type="text" name="linkedin_url" id="searchInput" placeholder="Enter the linkedin url..."
+                    onkeydown="return handleEnterKey(event)" oninput="expandInput(this)">
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                        viewBox="0,0,256,256">
+                        <g fill="#11ddaa" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(2,2)">
+                                <path
+                                    d="M52.34961,14.40039c-9.725,0 -19.44961,3.69961 -26.84961,11.09961c-14.8,14.8 -14.8,38.89922 0,53.69922c7.4,7.4 17.10039,11.10156 26.90039,11.10156c9.8,0 19.50039,-3.70156 26.90039,-11.10156c14.7,-14.8 14.69844,-38.89922 -0.10156,-53.69922c-7.4,-7.4 -17.12461,-11.09961 -26.84961,-11.09961zM52.30078,20.30078c8.2,0 16.39961,3.09844 22.59961,9.39844c12.5,12.5 12.49961,32.80078 0.09961,45.30078c-12.5,12.5 -32.80078,12.5 -45.30078,0c-12.5,-12.5 -12.5,-32.80078 0,-45.30078c6.2,-6.2 14.40156,-9.39844 22.60156,-9.39844zM52.30078,26.30078c-6.9,0 -13.40078,2.69922 -18.30078,7.69922c-4.7,4.7 -7.29961,10.80039 -7.59961,17.40039c-0.1,1.7 1.20039,2.99961 2.90039,3.09961h0.09961c1.6,0 2.9,-1.30039 3,-2.90039c0.2,-5.1 2.29883,-9.80039 5.79883,-13.40039c3.8,-3.8 8.80156,-5.89844 14.10156,-5.89844c1.7,0 3,-1.3 3,-3c0,-1.7 -1.3,-3 -3,-3zM35,64c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3zM83.36328,80.5c-0.7625,0 -1.5125,0.30039 -2.0625,0.90039c-1.2,1.2 -1.2,3.09922 0,4.19922l2.5,2.5c-0.6,1.2 -0.90039,2.50039 -0.90039,3.90039c0,2.4 0.89961,4.70039 2.59961,6.40039l12.80078,12.59961c1.8,1.8 4.09844,2.69922 6.39844,2.69922c2.3,0 4.60039,-0.89961 6.40039,-2.59961c3.5,-3.5 3.5,-9.19922 0,-12.69922l-12.79883,-12.80078c-1.7,-1.7 -4.00039,-2.59961 -6.40039,-2.59961c-1.4,0 -2.70039,0.30039 -3.90039,0.90039l-2.5,-2.5c-0.6,-0.6 -1.37422,-0.90039 -2.13672,-0.90039zM91.90039,88.90039c0.8,0 1.59961,0.30039 2.09961,0.90039l12.69922,12.69922c1.2,1.2 1.2,3.09922 0,4.19922c-1.2,1.2 -3.09922,1.2 -4.19922,0l-12.69922,-12.59961c-0.6,-0.6 -0.90039,-1.39922 -0.90039,-2.19922c0,-0.8 0.30039,-1.59961 0.90039,-2.09961c0.6,-0.6 1.29961,-0.90039 2.09961,-0.90039z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Reset the input value on page load
+            document.getElementById('searchInput').value = '';
+        });
+
+        function handleEnterKey(event) {
+            if (event.key === 'Enter') {
+                submitForm();
+                return false; // Prevents the default behavior of the Enter key
+            }
+            return true;
+        }
+
+        function submitForm() {
+            // Additional validation or actions can be added here if needed
+            var searchInput = document.getElementById('searchInput');
+            var form = document.forms[0];
+
+            // Clear the input value
+            searchInput.value = '';
+
+
+            // Manually submit the form
+            form.submit();
+
+            return false; // Prevents the default form submission
+        }
+
+
+        function expandInput(input) {
+            input.style.width = '400px';
+        }
+
+    </script>
+
+
+</body>
+
+
+
+
+</html>

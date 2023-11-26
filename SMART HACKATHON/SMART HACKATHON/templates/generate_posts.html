@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body style="background-color: black;">
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Num3R0<span>n4u7s</span></h2>
+               
+                <button onclick="location.href='/profile_analysis'" class="lead" type="button">Profile Analysis</button>
+                <button onclick="location.href='/post_analysis'" class="lead" type="button">Post Quality Analysis</button>
+                <button onclick="location.href='/generate_posts'" class="lead" type="button">Post Generation</button>
+                
+            <a href="{{ url_for('leaderboard') }}"><button class="lead" type="button">Leaderboard</button></a>
+        </nav>
+    </div>
+    <div class="content" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;margin-bottom: 0;">
+        <h1 style="padding-top:10%;color: rgb(235, 19, 19);">Gen3rate Po5ts :) </h1>
+        <p class="small">Generate posts based on recent trends!!<br>Have fun....</p>
+    </div>
+    <div class="body" style="border-top-left-radius: 0;border-top-right-radius: 0;margin-top: 0;padding-top: 10%;">
+        <div class="box" >
+
+            <form action="/result_gen_post" method="post">
+                <button type="submit" style="background: transparent;font-size: large;border: 0; ">Generate Post</button>
+            </form>
+        
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+
+</html>

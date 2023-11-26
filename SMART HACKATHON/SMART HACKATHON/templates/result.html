@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Result</title>
+</head>
+
+<body>
+    <div id="result-content">
+        <h1>LinkedIn Result for <span id="name">{{ name }}</span></h1>
+
+        <img src="{{ img_url }}" id="profile-image" alt="Profile Image" width="100px">
+        <p>Final Score: <span id="final-score">{{ final_score_positive }}</span>/10</p>
+
+        <h2>Emotion Analysis</h2>
+        <ul id="emotion-list">
+            {% for emotion, count in final_sorted_emotions.items() %}
+            <li>{{ emotion }}: {{ count }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Posts Analysis</h2>
+        <ul id="posts-list">
+            {% for post, score, emotion in posts_data %}
+            <li>
+                <p>{{ post }}</p>
+                <p>Score: {{ score }}/10</p>
+                <p>Emotion: {{ emotion }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

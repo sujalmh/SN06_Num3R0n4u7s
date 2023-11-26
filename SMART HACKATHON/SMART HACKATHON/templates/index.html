@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+
+        body{
+            
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow-x: hidden;
+        }
+
+.hero {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo {
+    font-size: 38px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo span {
+    color: red;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+nav a:hover{
+    color: #fd2929;
+}
+
+button.lead {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+button.lead:hover{
+            background-color: #1f1f1f;
+        }
+
+
+
+        section {
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 20px;
+            background-color: aqua;
+            font-size: 20px;
+
+        }
+
+        section h2 {
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        section button {
+            padding: 15.0px;
+            font-size: 16px;
+            background-color:red ;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            font-weight: bolder;
+        }
+
+        section button:hover{
+            background-color: #fd2929;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+    <nav>
+        <h2 class="logo">Num3R0<span>n4u7s</span></h2>
+           
+            <button onclick="location.href='/profile_analysis'" class="lead" type="button">Profile Analysis</button>
+            <button onclick="location.href='/post_analysis'" class="lead" type="button">Post Quality Analysis</button>
+            <button onclick="location.href='/generate_posts'" class="lead" type="button">Post Generation</button>
+            
+        <a href="{{ url_for('leaderboard') }}"><button class="lead" type="button">Leaderboard</button></a>
+    </nav>
+    </div>
+   
+
+    
+
+    <section id="bertAnalysis">
+        <h2>Profile Analysis</h2>
+        <p>This is the content for Bert Analysis.</p>
+        <hr>
+        <button onclick="location.href='/profile_analysis'">Go to Post Quality Analysis</button>
+    </section><hr>
+
+    <section id="postQualityAnalysis">
+        <h2>Post Quality Analysis</h2>
+        <p>This is the content for Post Quality Analysis.</p>
+        <hr>
+        <button onclick="location.href='/post_analysis'">Go to Post Generation</button>
+    </section><hr>
+
+    <section id="postGeneration">
+        <h2>Post Generation</h2>
+        <p>This is the content for Post Generation.</p>
+        <hr>
+        <button onclick="location.href='/generate_posts'">Go to Sentiment Analysis</button>
+    </section>hr
+
+    
+
+</body>
+</html>

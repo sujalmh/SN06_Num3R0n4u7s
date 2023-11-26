@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>LinkedIn Result</title>
+    <style>
+        .w3-red{
+            width: 200px;
+        }
+        .w3-green{
+            width: calc({{per_pos}}% *200);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result-content">
+
+        <h2>Posts Analysis</h2>
+        <div class="w3-red">
+            <div class="w3-green" style="height:24px;"></div>
+        </div><br>
+
+        <p>{{post}}</p>
+        <p>Postive Comments Sumamry: {{summ_pos}}</p>
+        <p>Neutral Comments Sumamry: {{summ_neu}}</p>
+        <p>Negative Comments Sumamry: {{summ_neg}}</p>
+    </div>
+
+</body>
+
+</html>
