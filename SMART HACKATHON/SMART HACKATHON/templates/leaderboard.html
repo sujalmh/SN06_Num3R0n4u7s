@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+         body {
+            text-align: center; /* Center-align the text within the body */
+            background-color: aqua;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+    
+
+
+
+.hero {
+background-color: #333;
+color: white;
+position: fixed;
+width: 100%;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.logo {
+font-size: 38px;
+margin: 0;
+padding: 0;
+}
+
+.logo span {
+color: red;
+}
+
+nav a {
+text-decoration: none;
+color: white;
+margin: 0 10px;
+}
+
+nav a:hover{
+color: #fd2929;
+}
+
+button.lead {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+button.lead:hover{
+    background-color: #1f1f1f;
+}
+
+        
+        h1 {
+            text-align: center; /* Center-align the text within the h1 element */
+            padding-top: 3%;
+            font-weight : bolder;
+            font-size: 30px;
+            
+        }
+
+        table {
+            margin: auto; /* Center-align the table within its container */
+            width: 80%; /* Set a width for the table */
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 3px solid #ffffff;
+            padding: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bolder;
+            background-color: #fa9a93;
+        }
+
+        th {
+            
+            background-color: #9f9f9f;
+            color: #000000;
+            font-size: 25px;
+            
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px;
+            color: rgb(255, 8, 8);
+            padding-top: 25%;
+            padding-left: 3%;
+            position: fixed;
+            top: 16px;
+            left: 2px;
+        }
+
+        .back-button::before {
+            content: ""; 
+            color: #fd2929;
+            margin-right: 5px;
+        }
+        .back-button img {
+            width: 25px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            color: #fd2929;
+        }
+        .emoji{
+            text-align: center;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Num3R0<span>n4u7s</span></h2>
+               
+                <button onclick="location.href='/profile_analysis'" class="lead" type="button">Profile Analysis</button>
+                <button onclick="location.href='/post_analysis'" class="lead" type="button">Post Quality Analysis</button>
+                <button onclick="location.href='/generate_posts'" class="lead" type="button">Post Generation</button>
+                
+            <a href="{{ url_for('leaderboard') }}"><button class="lead" type="button">Leaderboard</button></a>
+        </nav>
+        </div>
+
+
+    <a href="javascript:history.back()" class="back-button">
+        <img src="http://127.0.0.1:5000/static/images/arrow-left-solid.svg" alt="Back">
+    </a>
+    <br><br>
+    <h1><b>Sentiment Score and Emotions of top 10 followed Accounts on LinkedIn</b></h1>
+    <div class="emoji"><ul>&#128512<br>Joy </ul> 
+        <ul>&#128578<br>Neutral </ul>
+        <ul>&#128562<br>Shock</ul>    
+        <ul>&#128552<br>Fear  </ul>  
+        <ul>&#128545<br>Angry</ul>  </div>
+    <!-- Leaderboard Entries as Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player Name</th>
+                <th>Sentiment Score</th>
+                <th>Emotions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Entry 1 -->
+            <tr>
+                <td>1</td>
+                <td>Bill Gates</td>
+                <td>6.7</td>
+                <td>&#128578; &#128512;</td>
+            </tr>
+
+            <!-- Entry 2 -->
+            <tr>
+                <td>2</td>
+                <td>Richard Branson</td>
+                <td>7.3</td>
+                <td>&#128578; &#128512; &#128545;</td>
+            </tr>
+
+            <!-- Entry 3 -->
+            <tr>
+                <td>3</td>
+                <td>Jeff Weiner</td>
+                <td>7.7</td>
+                <td>&#128578; &#128512; &#128577;</td>
+            </tr>
+
+            <!-- Entry 4 -->
+            <tr>
+                <td>4</td>
+                <td>Arianna Huffington</td>
+                <td>6.4</td>
+                <td>&#128578; &#128512;</td>
+
+            <!-- Entry 5 -->
+            <tr>
+                <td>5</td>
+                <td>Satya Nadella</td>
+                <td>7.9</td>
+                <td>&#128578; &#128512; &#128545;</td>
+            </tr>
+
+            <!-- Entry 6 -->
+            <tr>
+                <td>6</td>
+                <td>Mark Cuban</td>
+                <td>5.3</td>
+                <td>&#128578; &#128512; &#128562; &#128545;</td>
+            </tr>
+
+            <!-- Entry 7 -->
+            <tr>
+                <td>7</td>
+                <td>Tony Robbins</td>
+                <td>6.5</td>
+                <td>&#128578; &#128512; &#128545;</td>
+            </tr>
+
+            <!-- Entry 8 -->
+            <tr>
+                <td>8</td>
+                <td>Melinda Gates</td>
+                <td>6.7</td>
+                <td>&#128578; &#128512; &#128577; &#128552; &#128562;</td>
+            </tr>
+
+            <!-- Entry 9 -->
+            <tr>
+                <td>9</td>
+                <td>Jack Welch</td>
+                <td>5.4</td>
+                <td>&#128578; &#128512; &#128552; &#128562;</td>
+            </tr>
+
+            <!-- Entry 10 -->
+            <tr>
+                <td>10</td>
+                <td>Simon Sinek</td>
+                <td>6.4</td>
+                <td>&#128578; &#128512; &#128545;</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+</body>
+</html>
+

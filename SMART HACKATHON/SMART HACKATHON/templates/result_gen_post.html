@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
     <title>Results of Generated Posts</title>
 </head>
 <body>
@@ -10,7 +12,7 @@
     {% if outputs %}
         {% for key, value in outputs.items() %}
             <h2>{{ key }}</h2>
-            <p><md-block>{{ value }}</md-block></p>
+            <p><md-block>{{ list(value.values())[0] }}</md-block></p>
         {% endfor %}
     {% endif %}
 

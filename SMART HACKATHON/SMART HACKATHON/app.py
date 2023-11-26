@@ -15,7 +15,7 @@ def profile_analysis():
 
 @app.route('/leaderboard')
 def leaderboard():
-    return render_template('lead.html')
+    return render_template('leaderboard.html')
 
 @app.route('/post_analysis')
 def post_analysis():

@@ -54,7 +54,7 @@ def results(target_url,no_of_posts):
     count=[]
     posts_container = []
     no_of_posts=200
-    while len(posts_container)<no_of_posts:  
+    while len(posts_container)<100:  
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         posts_container = driver.find_elements_by_class_name('profile-creator-shared-feed-update__container')
         count.append(len(posts_container))
